@@ -8,3 +8,6 @@ const server = net.createServer(socket => {
 })
 
 server.listen(8080)
+
+// example command 
+// telnet 192.168.43.89 8080
