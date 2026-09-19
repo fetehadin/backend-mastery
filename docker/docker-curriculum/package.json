@@ -1,0 +1,25 @@
+{
+  "name": "docker-curriculum",
+  "version": "0.0.1",
+  "description": "# Docker for Beginners",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm --prefix starlight run dev",
+    "build": "npm --prefix starlight run build",
+    "preview": "npm --prefix starlight run preview",
+    "start": "npm --prefix starlight run dev",
+    "starlight:dev": "npm --prefix starlight run dev",
+    "starlight:build": "npm --prefix starlight run build",
+    "starlight:preview": "npm --prefix starlight run preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakhar1989/docker-curriculum.git"
+  },
+  "author": "Prakhar Srivastav <prakhar1989@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prakhar1989/docker-curriculum/issues"
+  },
+  "homepage": "https://github.com/prakhar1989/docker-curriculum#readme"
+}
