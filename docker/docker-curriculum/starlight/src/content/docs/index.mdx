@@ -1,0 +1,80 @@
+---
+title: Docker Curriculum
+description: A hands-on Docker tutorial covering containers, Dockerfiles, Compose, multi-container apps, and deployment to AWS.
+template: splash
+tableOfContents: false
+---
+
+import { Image } from 'astro:assets';
+import Icon from '../../../node_modules/@astrojs/starlight/user-components/Icon.astro';
+import dockerLogo from '../../assets/logo.png';
+
+<div class="dc-home not-content">
+  <section class="dc-hero" aria-labelledby="dc-home-title">
+    <div class="dc-hero-copy">
+      <p class="dc-eyebrow">A hands-on Docker tutorial</p>
+      <h1 id="dc-home-title" class="dc-hero-title">Learn Docker by building real apps.</h1>
+      <p>
+        Start with <code>docker run</code>, package a Flask app, connect it to Elasticsearch with Compose, and deploy it to AWS. No Docker experience required.
+      </p>
+      <div class="dc-hero-actions">
+        <a class="dc-button dc-button-primary" href="/introduction/00-docker/">Start the tutorial</a>
+        <a class="dc-button dc-button-secondary" href="https://github.com/prakhar1989/docker-curriculum" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="dc-hero-visual">
+      <Image src={dockerLogo} alt="Docker for Beginners" class="dc-hero-logo" />
+      <div class="dc-terminal-card" aria-label="Curriculum preview">
+        <div class="dc-terminal-bar"><span class="dc-terminal-dot"></span><span>docker-curriculum ~ ready</span></div>
+        <pre class="dc-terminal-command"><strong>$</strong> docker run hello-world
+<strong>→</strong> write your first Dockerfile
+<strong>→</strong> run Flask + Elasticsearch with Compose
+<strong>→</strong> deploy the app to AWS</pre>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="dc-path-title">
+    <div class="dc-section-heading">
+      <h2 id="dc-path-title">Choose where to start</h2>
+    </div>
+
+    <div class="dc-paths">
+      <a class="dc-path-card" href="/introduction/00-docker/">
+        <span class="dc-path-number">01 / FOUNDATIONS</span>
+        <h3>Start with the basics</h3>
+        <p>Learn how images and containers work, and how Docker differs from a virtual machine.</p>
+      </a>
+      <a class="dc-path-card" href="/webapps-with-docker/00-static-sites/">
+        <span class="dc-path-number">02 / DOCKERFILES</span>
+        <h3>Containerize a web app</h3>
+        <p>Serve a static site with Nginx, then package a Flask app in your own image.</p>
+      </a>
+      <a class="dc-path-card" href="/multi-container-environments/00-introduction/">
+        <span class="dc-path-number">03 / COMPOSE</span>
+        <h3>Connect two services</h3>
+        <p>Run the Food Trucks app with Flask and Elasticsearch using Docker networking and Compose.</p>
+      </a>
+      <a class="dc-path-card" href="/modern-docker/00-introduction/">
+        <span class="dc-path-number">04 / MODERN DOCKER</span>
+        <h3>Make builds faster and safer</h3>
+        <p>Use multi-stage builds, target ARM and x86, sync code with Compose Watch, and harden your containers.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="dc-home-footer">
+    <span>Written and developed by <a href="https://github.com/prakhar1989" target="_blank" rel="noopener">Prakhar Srivastav</a>.</span>
+    <nav class="dc-social-links" aria-label="Social links">
+      <a class="dc-social-link" href="https://github.com/prakhar1989" target="_blank" rel="noopener" aria-label="GitHub">
+        <Icon name="github" />
+        <span>GitHub</span>
+      </a>
+      <a class="dc-social-link" href="https://www.linkedin.com/in/prakharsrivastav/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <Icon name="linkedin" />
+        <span>LinkedIn</span>
+      </a>
+    </nav>
+  </footer>
+</div>
