@@ -1,0 +1,6 @@
+[build]
+  command = "cd starlight && npm install && npm run build"
+  publish = "starlight/dist"
+
+[build.environment]
+  NODE_VERSION = "22.12.0"
