@@ -1,0 +1,30 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8000"
+    depends_on:
+      - db
+      - cache
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: appdb
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  cache:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  pg_data:
+  redis_data:
